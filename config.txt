@@ -1,0 +1,1 @@
+configure the seedgen-python.txt to seedgen.py

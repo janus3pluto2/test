@@ -1,0 +1,22 @@
+#https://github.com/group-59/lens_v0.0.1-test fork version
+######################################################################################################
+#  janeZero3       part of the seedgen file that makes sure no on edits the file with out spescifide #
+#                  software.                                                                         #
+#  PATREON         MARS JANUS AND JUNO                                                               #
+######################################################################################################
+import hashlib
+# useine stat function of os moduale
+import os
+
+# input the file name including the path to that file
+# size of the file
+file_size = os.stat(input("filename: "))
+
+h= hashlib.sha256()
+h.update(str(file_size).encode('utf-8'))
+h.hexdigest()
+
+print("format the file that will be hashed including path to the file")
+print("file name that is going to get hashed: \n", file_size)
+print("size of the file : \n",file_size.st_size, "bytes")
+print("hash of the file: \n", h.hexdigest())
